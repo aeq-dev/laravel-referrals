@@ -49,5 +49,7 @@
     },
     "scripts": {
         "test": "./test.sh"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
