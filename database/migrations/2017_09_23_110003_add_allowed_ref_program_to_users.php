@@ -13,9 +13,9 @@ class AddAllowedRefProgramToUsers extends Migration
      */
     public function up()
     {
-        if (app()->environment() === 'testing') {
+        /* if (app()->environment() === 'testing') {
             return;
-        }
+        } */
 
         Schema::table($this->getUsersTable(), function (Blueprint $table) {
             $table->integer('referral_program_id')->unsigned()->nullable()->dafault(null);
@@ -34,9 +34,9 @@ class AddAllowedRefProgramToUsers extends Migration
      */
     public function down()
     {
-        if (app()->environment() === 'testing') {
+        /* if (app()->environment() === 'testing') {
             return;
-        }
+        } */
 
         Schema::table($this->getUsersTable(), function (Blueprint $table) {
             $table->dropForeign(['referral_program_id']);

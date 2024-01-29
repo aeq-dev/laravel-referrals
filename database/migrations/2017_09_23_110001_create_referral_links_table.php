@@ -18,6 +18,7 @@ class CreateReferralLinksTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('referral_program_id')->unsigned();
             $table->string('code', 36)->index();
+            $table->unsignedBigInteger('clicks')->default(0);
             $table->unique(['referral_program_id', 'user_id']);
             $table->timestamps();
 
