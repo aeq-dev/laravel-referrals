@@ -1,6 +1,6 @@
 <?php
 
-namespace Pdazcom\Referrals\Providers;
+namespace Bkfdev\Referrals\Providers;
 
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider;
@@ -9,11 +9,11 @@ class ReferralsServiceProvider extends EventServiceProvider
 {
 
     protected $listen = [
-        'Pdazcom\Referrals\Events\UserReferred' => [
-            'Pdazcom\Referrals\Listeners\ReferUser',
+        'Bkfdev\Referrals\Events\UserReferred' => [
+            'Bkfdev\Referrals\Listeners\ReferUser',
         ],
-        'Pdazcom\Referrals\Events\ReferralCase' => [
-            'Pdazcom\Referrals\Listeners\RewardUser',
+        'Bkfdev\Referrals\Events\ReferralCase' => [
+            'Bkfdev\Referrals\Listeners\RewardUser',
         ],
     ];
 
@@ -35,7 +35,7 @@ class ReferralsServiceProvider extends EventServiceProvider
         // publish config
         $this->publishes([__DIR__ . '/../../config/referrals.php' => config_path('referrals.php')], 'referrals-config');
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         // publish migrations
         $migrationsPath = __DIR__ . '/../../database/migrations/2017_09_23_1100';
@@ -46,10 +46,10 @@ class ReferralsServiceProvider extends EventServiceProvider
             "{$migrationsPath}03_add_allowed_ref_program_to_users.php" => database_path('migrations/' . date("Y_m_d_Hi") . "03_add_allowed_ref_program_to_users.php"),
         ], 'referrals-migrations');
 
-        AboutCommand::add('Laravel Referrals', fn () => [
+        AboutCommand::add('Laravel Referrals', fn() => [
             'Version' => '1.0.0',
             'Description' => 'A simple system of referrals with the ability to assign different programs for different users.',
-            'Url' => 'https://github.com/pdazcom/laravel-referrals'
+            'Url' => 'https://github.com/aeq-dev/laravel-referrals'
         ]);
     }
 }

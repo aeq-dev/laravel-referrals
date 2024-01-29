@@ -1,11 +1,12 @@
 <?php
 
-namespace Pdazcom\Referrals\Contracts;
+namespace Bkfdev\Referrals\Contracts;
 
 /**
  *
  */
-interface ProgramInterface {
+interface ProgramInterface
+{
 
     /**
      * Handler function for reward users

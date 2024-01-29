@@ -1,6 +1,6 @@
 <?php
 
-namespace Pdazcom\Referrals\Models;
+namespace Bkfdev\Referrals\Models;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
@@ -11,7 +11,7 @@ use Ramsey\Uuid\Uuid;
 
 /**
  * Class ReferralLink
- * @package Pdazcom\Referrals\Models
+ * @package Bkfdev\Referrals\Models
  * @property int $id
  * @property string $code
  * @property Collection $relationships
@@ -46,7 +46,7 @@ class ReferralLink extends Model
 
     public function link(): Attribute
     {
-        return Attribute::get( fn () => url($this->program->uri) . '?ref=' . $this->code);
+        return Attribute::get(fn() => url($this->program->uri) . '?ref=' . $this->code);
     }
 
     public function user(): BelongsTo

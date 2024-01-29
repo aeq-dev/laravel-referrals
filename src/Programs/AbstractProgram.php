@@ -1,11 +1,12 @@
 <?php
 
-namespace Pdazcom\Referrals\Programs;
+namespace Bkfdev\Referrals\Programs;
 
-use Pdazcom\Referrals\Contracts\ProgramInterface;
-use Pdazcom\Referrals\Models\ReferralProgram;
+use Bkfdev\Referrals\Contracts\ProgramInterface;
+use Bkfdev\Referrals\Models\ReferralProgram;
 
-abstract class AbstractProgram implements ProgramInterface {
+abstract class AbstractProgram implements ProgramInterface
+{
 
     /**
      * @var ReferralProgram

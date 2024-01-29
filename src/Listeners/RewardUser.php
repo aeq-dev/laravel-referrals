@@ -1,18 +1,19 @@
 <?php
 
-namespace Pdazcom\Referrals\Listeners;
+namespace Bkfdev\Referrals\Listeners;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Log;
-use Pdazcom\Referrals\Events\ReferralCase;
-use Pdazcom\Referrals\Models\ReferralProgram;
+use Bkfdev\Referrals\Events\ReferralCase;
+use Bkfdev\Referrals\Models\ReferralProgram;
 
 /**
  * Reward accrual
  */
-class RewardUser {
+class RewardUser
+{
 
     public function handle(ReferralCase $event): void
     {

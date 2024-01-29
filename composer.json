@@ -1,7 +1,7 @@
 {
-    "name": "pdazcom/laravel-referrals",
+    "name": "bkfdev/laravel-referrals",
     "description": "A referrals system for a laravel projects.",
-    "homepage": "https://github.com/pdazcom/laravel-referrals",
+    "homepage": "https://github.com/aeq-dev/laravel-referrals",
     "keywords": [
         "laravel",
         "referrals",
@@ -24,24 +24,26 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Konstantin A.",
-            "email": "kostya.dn@gmail.com"
+            "name": "Abdelkader BKF",
+            "email": "bkfdev@gmail.com",
+            "homepage": "https://takaamul.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Pdazcom\\Referrals\\": "src/"
+            "Bkfdev\\Referrals\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Pdazcom\\Referrals\\Tests\\": "tests/"
+            "Bkfdev\\Referrals\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Pdazcom\\Referrals\\Providers\\ReferralsServiceProvider"
+                "Bkfdev\\Referrals\\Providers\\ReferralsServiceProvider"
             ]
         }
     },

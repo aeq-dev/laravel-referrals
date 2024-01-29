@@ -1,6 +1,6 @@
 <?php
 
-namespace Pdazcom\Referrals\Events;
+namespace Bkfdev\Referrals\Events;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Events\Dispatchable;

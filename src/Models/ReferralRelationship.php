@@ -1,6 +1,6 @@
 <?php
 
-namespace Pdazcom\Referrals\Models;
+namespace Bkfdev\Referrals\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

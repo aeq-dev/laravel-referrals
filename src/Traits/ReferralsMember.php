@@ -1,17 +1,18 @@
 <?php
 
-namespace Pdazcom\Referrals\Traits;
+namespace Bkfdev\Referrals\Traits;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Pdazcom\Referrals\Models\ReferralLink;
-use Pdazcom\Referrals\Models\ReferralProgram;
+use Bkfdev\Referrals\Models\ReferralLink;
+use Bkfdev\Referrals\Models\ReferralProgram;
 
 /**
  * Trait ReferralsMember
- * @package Pdazcom\Referrals\Traits
+ * @package Bkfdev\Referrals\Traits
  */
-trait ReferralsMember {
+trait ReferralsMember
+{
 
     public function getReferrals(): Collection|\Illuminate\Support\Collection
     {

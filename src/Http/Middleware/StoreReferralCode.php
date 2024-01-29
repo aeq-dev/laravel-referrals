@@ -1,20 +1,21 @@
 <?php
 
-namespace Pdazcom\Referrals\Http\Middleware;
+namespace Bkfdev\Referrals\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Pdazcom\Referrals\Models\ReferralLink;
-use Pdazcom\Referrals\Models\ReferralProgram;
+use Bkfdev\Referrals\Models\ReferralLink;
+use Bkfdev\Referrals\Models\ReferralProgram;
 
 /**
  * Class StoreReferralCode
- * @package Pdazcom\Referrals\Http\Middleware
+ * @package Bkfdev\Referrals\Http\Middleware
  *
  * This middleware store referral link in cookies
  */
-class StoreReferralCode {
+class StoreReferralCode
+{
 
     public function handle(Request $request, Closure $next)
     {
