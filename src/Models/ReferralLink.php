@@ -35,7 +35,7 @@ class ReferralLink extends Model
 
     private function generateCode()
     {
-        $this->code = (string) Str::random();
+        $this->code = (string) Str::uuid();
     }
 
     public static function getReferral($user, $program)
