@@ -17,11 +17,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class ReferralProgram extends Model
 {
-
-    /**
-     * @var array
-     */
-    protected $fillable = ['name', 'uri', 'lifetime_minutes', 'title', 'description'];
+    //protected $fillable = ['name', 'uri', 'lifetime_minutes', 'title', 'description'];
+    protected $guarded = [];
 
     public function links(): HasMany
     {

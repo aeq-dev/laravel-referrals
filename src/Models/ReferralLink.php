@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection;
-use Ramsey\Uuid\Uuid;
+use Illuminate\Support\Str;
 
 /**
  * Class ReferralLink
@@ -19,7 +19,8 @@ use Ramsey\Uuid\Uuid;
  */
 class ReferralLink extends Model
 {
-    protected $fillable = ['user_id', 'referral_program_id'];
+    //protected $fillable = ['user_id', 'referral_program_id'];
+    protected $guarded = [];
 
     protected static function boot()
     {
@@ -27,13 +28,14 @@ class ReferralLink extends Model
         parent::boot();
 
         static::creating(function (ReferralLink $model) {
-            $model->generateCode();
+            if (!$model->code)
+                $model->generateCode();
         });
     }
 
     private function generateCode()
     {
-        $this->code = (string) Uuid::uuid1();
+        $this->code = (string) Str::random();
     }
 
     public static function getReferral($user, $program)
