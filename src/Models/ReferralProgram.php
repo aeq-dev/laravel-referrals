@@ -17,6 +17,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class ReferralProgram extends Model
 {
+    protected $casts = [
+        'active' => 'boolean',
+        'default' => 'boolean',
+        'starts_at' => 'datetime',
+        'expires_at' => 'datetime',
+    ];
     //protected $fillable = ['name', 'uri', 'lifetime_minutes', 'title', 'description'];
     protected $guarded = [];
 
