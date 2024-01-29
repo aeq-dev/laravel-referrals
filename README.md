@@ -19,8 +19,8 @@ author is Damir Miladinov, with some minor changes, for which I express my grati
 
 Via Composer
 
-```bash
-$ composer require bkfdev/laravel-referrals
+```
+composer require bkfdev/laravel-referrals
 ```
 
 Then in config/app.php add service-provider and facade alias:
