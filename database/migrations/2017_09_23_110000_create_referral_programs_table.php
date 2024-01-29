@@ -19,6 +19,7 @@ class CreateReferralProgramsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('uri');
+            $table->foreignId('product_id')->on('products')->nullable()->index();
             $table->text('title')->nullable();
             $table->text('description')->nullable();
             $table->integer('lifetime_minutes')->default(self::DEFAULT_LIFETIME);
