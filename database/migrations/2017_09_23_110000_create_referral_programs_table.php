@@ -24,6 +24,7 @@ class CreateReferralProgramsTable extends Migration
             $table->text('description')->nullable();
             $table->integer('lifetime_minutes')->default(self::DEFAULT_LIFETIME);
             $table->foreignId('store_id')->on('stores')->nullable()->index();
+            $table->foreignId('loyalty_id')->on('loyalties')->nullable()->index();
             $table->boolean('default')->default(false);
             $table->boolean('active')->default(true);
             $table->timestamp('starts_at')->nullable();
