@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAllowedRefProgramToUsers extends Migration
+class AddAllowedRefLinkToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -18,11 +18,11 @@ class AddAllowedRefProgramToUsers extends Migration
         } */
 
         Schema::table($this->getUsersTable(), function (Blueprint $table) {
-            $table->integer('referral_program_id')->unsigned()->nullable()->dafault(null);
+            $table->integer('referral_link_id')->unsigned()->nullable()->dafault(null);
 
-            $table->foreign('referral_program_id')
+            $table->foreign('referral_link_id')
                 ->references('id')
-                ->on('referral_programs')
+                ->on('referral_links')
                 ->onDelete('set null');
         });
     }

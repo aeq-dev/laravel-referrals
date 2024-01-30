@@ -21,9 +21,9 @@ trait ReferralsMember
         })->filter();
     }
 
-    public function referralProgram(): HasOne
+    public function referralLink(): HasOne
     {
-        return $this->hasOne(ReferralProgram::class, 'id', 'referral_program_id');
+        return $this->hasOne(ReferralLink::class, 'id', 'referral_link_id');
     }
 
 }
