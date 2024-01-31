@@ -39,8 +39,8 @@ class AddAllowedRefLinkToUsers extends Migration
         } */
 
         Schema::table($this->getUsersTable(), function (Blueprint $table) {
-            $table->dropForeign(['referral_program_id']);
-            $table->dropColumn('referral_program_id');
+            $table->dropForeign(['referral_link_id']);
+            $table->dropColumn('referral_link_id');
         });
     }
 
