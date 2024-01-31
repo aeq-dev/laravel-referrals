@@ -15,6 +15,7 @@ class CreateReferralLinksTable extends Migration
     {
         Schema::create('referral_links', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('short_link_id')->nullable()->index();
             $table->integer('user_id')->unsigned();
             $table->integer('referral_program_id')->unsigned();
             $table->string('code', 36)->index();
